@@ -1,6 +1,6 @@
 # VUB Events
 
-A Web 2.0 application for discovering, creating and sharing events at and around VUB.
+A Web application for discovering, creating and sharing events at and around VUB.
 Group project for the course **Web Technologies** (VUB, 2026–2027).
 
 ## Team
@@ -16,15 +16,15 @@ Group project for the course **Web Technologies** (VUB, 2026–2027).
 
 - **Backend:** Django (Python)
 - **Database:** PostgreSQL
-- **API:** Django REST Framework _(planned)_
-- **Map:** Leaflet _(planned)_
-- **Styling:** CSS / Sass _(planned)_
+- **API:** Django REST Framework
+- **Map:**
+- **Styling:** CSS / Sass
 
 ## Requirements
 
 - Python **3.12+**
 - Git
-- Docker _(will be required once PostgreSQL is added)_
+- Docker
 
 ## Setup
 
@@ -90,8 +90,8 @@ Stop the server with `Ctrl+C` and leave the virtual environment with `deactivate
   ```bash
   pip freeze > requirements.txt
   ```
-- Changing a model? Announce it in the group chat first to avoid migration conflicts.
-- **Log your hours** in the shared time sheet on the same day you worked.
+- **Log your hours** in the shared time sheet on the same day you worked. 
+- https://docs.google.com/spreadsheets/d/1l63NvNomHOt0NzRcwLW-7G321yMWOKWz/edit?usp=sharing&ouid=113428561195025500800&rtpof=true&sd=true
 
 ## Project structure
 
@@ -102,7 +102,3 @@ Webtech_VUB_events/
 ├── requirements.txt   # Python dependencies
 └── README.md
 ```
-
-## Use of Generative AI
-
-Generative AI was used in this project. See the report for a declaration of how and where.
