@@ -97,7 +97,7 @@ Stop the server with `Ctrl+C` and leave the virtual environment with `deactivate
 
 ```
 Webtech_VUB_events/
-├── config/            # Django project settings, root URLs, WSGI/ASGI
+├── config/            # Django project settings
 ├── manage.py          # Django command-line utility
 ├── requirements.txt   # Python dependencies
 └── README.md
