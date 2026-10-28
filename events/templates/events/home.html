@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{% static 'events/style.css' %}">
+</head>
+<body>
+    <header>
+        <img src="{% static 'events/images/vub_mono_positief_outline.png' %}" style="filter: brightness(0) invert(1);">
+        <h2>EVENTS</h2>
+        <nav class="topbar">
+            <ul>
+                <li>Discover</li>
+                <li>My events</li>
+                <li>Host an event</li>
+                <li>Login</li>
+            </ul>
+        </nav>
+    </header>
+  <h1>{{ title }}</h1>
+  <p>Find events on and around the VUB.</p>
+
+
+</body>
+</html>

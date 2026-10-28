@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Roboto+Condensed:wght@700&display=swap');
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+
+h1,
+h2,
+h4,
+h6 {
+	font-family: 'TeX Gyre Adventor', sans-serif;
+	font-weight: 700;
+}
+
+h3,
+h5 {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 700;
+}
+
+nav.topbar {
+    color: #ffffff;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin-left: auto;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding: 5px 20px;
+	background: rgb(0, 51, 153);
+	border-bottom: 1px solid #e5e7eb;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+header img {
+	width: 80px;
+	height: 80px;
+	object-fit: contain;
+}
+
+header h2 {
+	margin: 0;
+	color: #ffffff;
+	font-size: 1.5rem;
+}
+/*1rem = 16px*/
+nav.topbar ul {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
