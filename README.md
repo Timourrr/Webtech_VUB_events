@@ -8,30 +8,34 @@ Group project for the course **Web Technologies** (VUB, 2026–2027).
 | Name | GitHub |
 |------|--------|
 | Timour Theunissen | [@Timourrr](https://github.com/Timourrr) |
-| _Member 2_ | _@username_ |
-| _Member 3_ | _@username_ |
-| _Member 4_ | _@username_ |
+| Yeno Ghijselings | @yenogh |
+| Happy De-Benoit Bikorimana | @happybikorimana |
+| Helena Hedbrant | @Lingonnet |
 
 ## Tech stack
 
 - **Backend:** Django (Python)
 - **Database:** PostgreSQL
-- **API:** Django REST Framework
-- **Map:**
-- **Styling:** CSS / Sass
+- **Map:** Unknown
+- **Styling:** CSS
 
 ## Requirements
 
 - Python **3.12+**
 - Git
-- Docker
+- Docker (for DB so not yet needed)
 
 ## Setup
 
 ### 1. Clone the repository
-
+If you have ssh setup:
 ```bash
 git clone git@github.com:Timourrr/Webtech_VUB_events.git
+cd Webtech_VUB_events
+```
+If not:
+```bash
+git clone https://github.com/Timourrr/Webtech_VUB_events.git
 cd Webtech_VUB_events
 ```
 
@@ -73,32 +77,46 @@ Open <http://127.0.0.1:8000>.
 
 Stop the server with `Ctrl+C` and leave the virtual environment with `deactivate`.
 
-## Workflow
-
-- **Never push directly to `main`.** It is protected.
+## Everyday Workflow
+Every time you want to add a feature make a new branch. This is the easiest way to stay organised.
 - Create a branch for every task:
   - `feature/<name>` for new functionality
   - `fix/<name>` for bug fixes
   - `docs/<name>` for documentation
-- Open a **pull request**. It needs **1 approval** from a teammate before merging.
+```bash
+git switch main
+git pull
+git switch -c feature/my-feature
+```
+After this you can just open it in any IDE.
+- To see your changes on the website you can do the following
+```bash
+cd Webtech_VUB_events
+source venv/bin/activate          # prompt shows (venv)
+python manage.py runserver
+```
+And then just open <http://127.0.0.1:8000>.
+
+If you are done for the day just commit by doing:
+```bash
+git status                       # check what changed
+git add .                        # stage all changes
+git commit -m "Add event list page"  # please give a useful name
+git push origin <branch-name>    # push to GitHub
+```
+If you finished your feature open a pull request. This will merge your code to the main branch.
+Try to not work on the same parts of the website in different branches this will cause merge conflicts.
+
+If you start working on something again always first pull the up to date code with git pull.
 - After every `git pull`, run:
   ```bash
   pip install -r requirements.txt
   python manage.py migrate
   ```
-- Installed a new package? Update the requirements file and commit it:
-  ```bash
-  pip freeze > requirements.txt
-  ```
+
 - **Log your hours** in the shared time sheet on the same day you worked. 
-- https://docs.google.com/spreadsheets/d/1l63NvNomHOt0NzRcwLW-7G321yMWOKWz/edit?usp=sharing&ouid=113428561195025500800&rtpof=true&sd=true
+- https://docs.google.com/spreadsheets/d/1l63NvNomHOt0NzRcwLW-7G321yMWOKWz/edit?usp=sharing&ouid=113428561195025500800&rtpof=true&sd=tru
+- YouTube tutorial for Django: https://www.youtube.com/watch?v=nGIg40xs9e4&t
+  - This will of course not teach you everything but w3schools also has tutorials.
 
-## Project structure
-
-```
-Webtech_VUB_events/
-├── config/            # Django project settings
-├── manage.py          # Django command-line utility
-├── requirements.txt   # Python dependencies
-└── README.md
-```
+Any question contact AI first, if that doesn't work then me.
