@@ -47,14 +47,21 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
+
+
 Windows:
 ```bash
 python -m venv venv
 venv\Scripts\activate
 ```
+If you are using powershell on windows
+```bash
+python -m venv venv
+venv\Scripts\Activate.ps1
+```
 
 Your prompt should now start with `(venv)`.
-
+Use AI if you get errors they are good at solving them
 ### 3. Install dependencies
 
 ```bash
