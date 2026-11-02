@@ -23,7 +23,7 @@ Group project for the course **Web Technologies** (VUB, 2026–2027).
 
 - Python **3.12+**
 - Git
-- Docker (for DB so not yet needed)
+- Docker Desktop (runs the PostgreSQL database)
 
 ## Setup
 
@@ -68,13 +68,35 @@ Use AI if you get errors they are good at solving them
 pip install -r requirements.txt
 ```
 
-### 4. Apply migrations
+### 4. Create your .env file
+
+The `.env` file holds your local settings and passwords. It is ignored by Git, so never commit it.
+
+macOS / Linux:
+```bash
+cp .env.example .env
+```
+
+Windows:
+```bash
+copy .env.example .env
+```
+
+### 5. Start the database
+
+Make sure Docker Desktop is running, then:
+```bash
+docker compose up -d --wait
+```
+If this fails because port 5432 is in use, stop any other PostgreSQL running on your computer.
+
+### 6. Apply migrations
 
 ```bash
 python manage.py migrate
 ```
 
-### 5. Run the development server
+### 7. Run the development server
 
 ```bash
 python manage.py runserver
@@ -83,6 +105,7 @@ python manage.py runserver
 Open <http://127.0.0.1:8000>.
 
 Stop the server with `Ctrl+C` and leave the virtual environment with `deactivate`.
+Stop the database with `docker compose stop`. Your data is kept for next time.
 
 ## Everyday Workflow
 Every time you want to add a feature make a new branch. This is the easiest way to stay organised.
@@ -100,6 +123,7 @@ After this you can just open it in any IDE.
 ```bash
 cd Webtech_VUB_events
 source venv/bin/activate          # prompt shows (venv)
+docker compose up -d --wait       # start the database
 python manage.py runserver
 ```
 And then just open <http://127.0.0.1:8000>.
