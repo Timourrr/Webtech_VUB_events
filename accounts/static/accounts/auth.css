@@ -1,0 +1,146 @@
+/* ---------- Layout ---------- */
+.auth-wrapper {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    background: #f4f6fb;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 2.5rem 2rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* register is a little wider because it has more fields */
+.auth-card--wide {
+    max-width: 460px;
+}
+
+.auth-card h1 {
+    margin: 0;
+    color: rgb(0, 51, 153);
+    text-align: center;
+}
+
+.auth-subtitle {
+    margin: 0.25rem 0 2rem;
+    text-align: center;
+    color: #6b7280;
+}
+
+/* ---------- Fields ---------- */
+.auth-card form p {
+    margin: 0 0 1.25rem;
+}
+
+.auth-card label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.auth-card input,
+.auth-card select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.7rem 0.9rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #ffffff;
+    font: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.auth-card select {
+    cursor: pointer;
+}
+
+.auth-card input:focus,
+.auth-card select:focus {
+    outline: none;
+    border-color: rgb(0, 51, 153);
+    box-shadow: 0 0 0 3px rgba(0, 51, 153, 0.15);
+}
+
+/* ---------- Live validation ---------- */
+/* only after the user has interacted with the field, not right on page load */
+.auth-card input:user-invalid {
+    border-color: #b42318;
+}
+
+.auth-card input:user-valid {
+    border-color: #16a34a;
+}
+
+.field-error {
+    display: block;
+    min-height: 1.1em;
+    margin-top: 0.3rem;
+    color: #b42318;
+    font-size: 0.8rem;
+}
+
+/* ---------- Django help texts ---------- */
+.auth-card .helptext {
+    display: block;
+    margin-top: 0.4rem;
+    color: #6b7280;
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+.auth-card .helptext ul {
+    margin: 0.3rem 0 0;
+    padding-left: 1.1rem;
+}
+
+.auth-card .helptext li {
+    margin-bottom: 0.15rem;
+}
+
+/* ---------- Server-side errors ---------- */
+.auth-card .errorlist {
+    margin: 0 0 1rem;
+    padding: 0.75rem 1rem;
+    list-style: none;
+    background: #fdecea;
+    color: #b42318;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+/* ---------- Button and link ---------- */
+.auth-button {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    background: rgb(0, 51, 153);
+    color: #ffffff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.auth-button:hover {
+    background: rgb(0, 38, 115);
+}
+
+.auth-switch {
+    margin: 1.5rem 0 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.auth-switch a {
+    color: rgb(0, 51, 153);
+    font-weight: 700;
+}

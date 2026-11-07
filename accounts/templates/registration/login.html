@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Log in | VUB Events{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'accounts/auth.css' %}">
+{% endblock %}
+
+{% block extra_js %}
+    <script src="{% static 'accounts/auth.js' %}" defer></script>
+{% endblock %}
+
+{% block content %}
+<section class="auth-wrapper">
+    <div class="auth-card">
+        <h1>Log in</h1>
+        <p class="auth-subtitle">Welcome back to VUB Events</p>
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="auth-button">Log in</button>
+        </form>
+
+        <p class="auth-switch">No account? <a href="{% url 'register' %}">Register</a></p>
+    </div>
+</section>
+{% endblock %}
